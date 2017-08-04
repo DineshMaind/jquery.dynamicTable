@@ -218,7 +218,7 @@
                 tableCell = $('<td></td>');
                 $(tableRow).append($(tableCell));
 
-                var inputControl = settings.getControl(settings.columns[x].key);
+                var inputControl = $(settings.getControl(settings.columns[x].key));
                 $(inputControl).attr('data-codeapi-inputkey', settings.columns[x].key);
                 $(inputControl).attr('data-codeapi-defaultvalue', $(inputControl).val());
                 $(tableCell).append($(inputControl));
@@ -292,7 +292,7 @@
                     tableCell = $('<td></td>');
                     $(tableRow).append($(tableCell));
 
-                    var inputControl = settings.getControl(settings.columns[y].key);
+                    var inputControl = $(settings.getControl(settings.columns[y].key));
                     $(inputControl).attr('data-codeapi-inputkey', settings.columns[y].key);
                     $(inputControl).val(settings.data[x][settings.columns[y].key]);
                     $(inputControl).hide();
