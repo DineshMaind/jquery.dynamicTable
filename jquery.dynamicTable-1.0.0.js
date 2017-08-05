@@ -322,7 +322,6 @@
             $(this).find('span[data-codeapi-displaykey]').each(function () {
                 var key = 'data-codeapi-displaykey';
                 var valueKey = 'data-codeapi-value';
-                var $this = $(this);
                 objModel[$(this).attr(key)] = decodeURIComponent($(this).attr(valueKey));
             });
 
