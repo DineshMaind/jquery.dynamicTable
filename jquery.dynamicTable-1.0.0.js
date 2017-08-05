@@ -9,8 +9,7 @@
  * @example
  */
 
-;
-(function ($) {
+ ; (function ($) {
     'use strict';
 
     $.fn.dynamicTable = function (options) {
@@ -244,14 +243,12 @@
 
                         currentRow.find('td').not(':first,:last').each(function () {
                             var tableCell = $(this);
-
                             var key = $(tableCell).find('*[data-codeapi-inputkey]').attr('data-codeapi-inputkey');
-
                             var newTableCell = $('<td></td>');
                             $(newRow).append($(newTableCell));
                             var currentInput = $(tableCell).find('*[data-codeapi-inputkey]');
                             var inputControl = $(currentInput).clone();
-
+                            $(inputControl).val($(currentInput).val());
                             $(inputControl).hide();
                             $(newTableCell).append($(inputControl));
 
